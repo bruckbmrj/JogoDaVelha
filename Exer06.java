@@ -22,8 +22,23 @@ public class Exer06 {
         
         boolean ganhou = false;
         int jogada = 1;
+        char sinal;
+        int linha = 0, coluna = 0;
         
         while(!ganhou){
+            
+            if (jogada % 2 == 1) { //jogador 1
+                System.out.println("Vez do jogador 1. Escolha linhae coluna (1-3). ");
+                sinal = 'X';
+            }else{ //jogador 2
+                System.out.println("Vez do jogador 2. Escolha linhae coluna (1-3). ");
+                sinal = 'O';
+            }
+            //continua a logica
+            boolean linhaValida = false;
+            while(!linhaValida){
+                System.out.println("Entre com a linha (1,2 ou 3)");
+            }
             
         }
                 
