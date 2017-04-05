@@ -57,7 +57,12 @@ public class Exer06 {
                 }
             }
             
-            
+            if (jogoVelha[linha][coluna]=='X' || jogoVelha[linha][coluna]=='O' ) {
+                System.out.println("Posição já usada, tente novamente.");
+            } else{ //jogada valida
+                jogoVelha[linha][coluna] = sinal;
+                jogada++;
+            }
             
         }
                 
