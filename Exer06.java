@@ -57,6 +57,9 @@ public class Exer06 {
                 }
             }
             
+            //cria decremento para as colunas e linhas funcionarem sem conflito
+            linha--;
+            coluna--;
             if (jogoVelha[linha][coluna]=='X' || jogoVelha[linha][coluna]=='O' ) {
                 System.out.println("Posição já usada, tente novamente.");
             } else{ //jogada valida
