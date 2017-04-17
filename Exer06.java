@@ -73,7 +73,7 @@ public class Exer06 {
                 for (int j = 0; j < jogoVelha[i].length; j++) {
                     System.out.print(jogoVelha[i][j] + " | ");
                 }
-                System.out.println();
+                System.out.println( );
             }
 
             //verifica se há ganhador
