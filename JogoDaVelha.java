@@ -11,9 +11,30 @@ package aula20_labs.JogoDaVelha;
  */
 public class JogoDaVelha {
 
-    char[][] jogoVelha = new char[3][3];
-    int jogada = 1;
+    private char[][] jogoVelha;
+    private int jogada;
 
+    public JogoDaVelha() {
+        jogoVelha = new char[3][3];
+        jogada = 1;
+    }
+
+    public char[][] getJogoVelha() {
+        return jogoVelha;
+    }
+
+    public void setJogoVelha(char[][] jogoVelha) {
+        this.jogoVelha = jogoVelha;
+    }
+
+    public int getJogada() {
+        return jogada;
+    }
+
+    public void setJogada(int jogada) {
+        this.jogada = jogada;
+    }
+ 
 
     boolean validarJogada(int linha, int coluna, char sinal) {
         if (jogoVelha[linha][coluna] == sinal || jogoVelha[linha][coluna] == 'O') {
@@ -23,18 +44,18 @@ public class JogoDaVelha {
             jogada++;
             return true;
         }
-    }
-
+    }   
+    
     void imprimirTabuleiro() {
         for (int i = 0; i < jogoVelha.length; i++) {
             for (int j = 0; j < jogoVelha[i].length; j++) {
                 System.out.print(jogoVelha[i][j] + " | ");
             }
-            System.out.println();
+            System.out.println( );
         }
-    }
-
-    boolean verificarGanhador(char sinal) {
+    }    
+    
+    public boolean verificarGanhador(char sinal) {
         //verifica se há ganhador
         if ((jogoVelha[0][0] == sinal && jogoVelha[0][1] == sinal && jogoVelha[0][2] == sinal) //linha 1
                 || (jogoVelha[1][0] == sinal && jogoVelha[1][1] == sinal && jogoVelha[1][2] == sinal) //linha 2
@@ -48,9 +69,10 @@ public class JogoDaVelha {
             return true;
         }
         return false;
-    }
+    }  
     
-        boolean vezJogador1(){
+        
+    public boolean vezJogador1(){
         if (jogada % 2 == 1){
             return true;
         }
